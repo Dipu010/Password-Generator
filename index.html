@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+    <div class="wrapper py-[200px] bg-gradient-to-tl from-indigo-500 ">
+
+        <div class="max-w-[500px] mx-auto relative flex flex-col bg-violet-400 justify-center  gap-4 rounded-lg py-8">
+            
+            <h1 class="text-[24px] mx-auto max-w-[350px]  px-10 py-5">PASSWORD GENERATOR</h1>
+            
+            <div class="displayContainer  flex mx-auto gap-3">
+
+                <input readonly placeholder="Password" class="display " data-display>
+
+                <button class="" dataCopy>
+                   
+                    <img src="assets/copy.svg" alt="copy" height="23" width="23">
+                    <span dataCopy-msg class="absolute my-[-50px] mx-[-20px]  p-2"></span>
+                </button>
+                
+
+            </div>
+
+            <div class="password-type mx-auto">
+
+                <div class="flex gap-8">
+                    <p>Password Length</p>
+
+                    <p data-length-number></p>
+                </div>
+                
+                <input type="range" min="1" max="20" class="slider " step="1" data-length-slider>
+
+                <div>
+                    <input type="checkbox"  id="uppercase">
+                    <label for="uppercase">Includes UpperCase Letter</label>
+                </div>
+                <div>
+                    <input type="checkbox"  id="lowercase">
+                    <label for="lowercase">Includes LowerCase Letter</label>
+                </div>
+                <div>
+                    <input type="checkbox"  id="number">
+                    <label for="number">Includes Number</label>
+                </div>
+                <div>
+                    <input type="checkbox"  id="symbol">
+                    <label for="symbol">Includes symbol</label>
+                </div>
+
+                <div class="data-strength my-4 flex gap-16">
+                    <p>Strength</p>
+                    <div class="rounded-full bg-gray-400 w-6 id=strIndicator " strengthDisplay></div>
+                </div>
+
+                <button type="button" class=" generate-password-button text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 mx-2">Generate Password</button>
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
